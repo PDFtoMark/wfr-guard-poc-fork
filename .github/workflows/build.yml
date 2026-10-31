@@ -1,0 +1,9 @@
+name: Build
+on: pull_request
+jobs:
+  failing:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "forged Build workflow from attacker-controlled branch"
+          exit 1
