@@ -1,11 +1,10 @@
 name: Release Workflow
 on:
-  push:
-    branches: [main]
+  pull_request:
 permissions:
   contents: read
 jobs:
-  noop:
+  fake:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "legit release workflow (registered on default branch)"
+      - run: echo "FORGED_RELEASE_OK head_ref=${{ github.head_ref }}"
