@@ -1,0 +1,16 @@
+name: GAB Foundry Test
+on:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: make artifact
+        run: |
+          mkdir -p /tmp/content
+          printf '1\n' > /tmp/content/pr_number.txt
+          echo "x" > '/tmp/content/$(id)$(hostname).txt'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: content
+          path: /tmp/content
