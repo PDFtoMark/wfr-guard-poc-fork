@@ -1,0 +1,8 @@
+name: "Update Foundry llms.txt Documentation"
+on:
+  pull_request:
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "forged upstream completed"
