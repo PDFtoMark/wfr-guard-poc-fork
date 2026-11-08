@@ -1,0 +1,8 @@
+name: Trigger
+on:
+  pull_request:
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "forged Trigger workflow from fork head"
